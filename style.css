@@ -22,8 +22,21 @@
   display: flex;
 }
 
+.features, .fact {
+  margin: 85px auto;
+}
+
 .dark-2 {
   color: #424242;
+}
+
+.dark-3 {
+  color: #727272;
+}
+
+.title-h3 {
+  font-size: 2.8rem;
+  font-weight: bold;
 }
 
 p {
@@ -31,6 +44,14 @@ p {
   line-height: 26px;
   color: #727272;
   margin-top: 24px;
+}
+
+img {
+  width: 100%;
+}
+
+.orange {
+  color: #ff900e;
 }
 
 /* button */
@@ -93,37 +114,119 @@ nav {
   margin-top: 40px;
 }
 
-.hero-img img{
-    width: 100%;
+/* feature */
 
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-@media screen and (max-width:576px) {
+.features .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+}
 
-    /* share */
-    .container{
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    nav{
-        flex-direction: column;
-        gap: 24px;
-    }
+.feature-text {
+  max-width: 34rem;
+}
 
-    .navbar ul{
-        gap: 50px;
-    }
+.feature-text h3 .dark-3 {
+  font-weight: 500;
+}
 
-    .hero-container{
-        margin-top: 2rem;
-    }
+/* fact */
 
-    .hero-text h1{
-        font-size: 3rem;
-    }
 
-    .hero-img img{
-        border-radius: 5px;
-    }
 
+.fact-head p {
+  max-width: 33rem;
+}
+
+.fact-card {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.fact-card .card {
+  border: 1px solid #ff900e;
+  border-radius: 8px;
+  margin-top: 80px;
+}
+
+.card .fact-icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  margin: 45px 95px 0;
+}
+
+.card .fact-card-h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #424242;
+}
+.card .fact-card-h4 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #727272;
+  margin-bottom: 60px;
+}
+
+/* mobile screen */
+
+@media screen and (max-width: 576px) {
+  /* share */
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  p {
+    margin-top: 18px;
+  }
+
+  /* hero */
+
+  nav,
+  .features {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .navbar ul {
+    gap: 50px;
+  }
+
+  .hero-container {
+    margin-top: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-img img {
+    border-radius: 5px;
+  }
+
+  /* feature */
+
+  .features .feature-grid {
+    column-gap: 12px;
+    row-gap: 12px;
+  }
+
+  .feature-text {
+    text-align: center;
+  }
+
+  .feature-text .title-h3 {
+    font-size: 2.2rem;
+  }
 }
